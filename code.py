@@ -37,6 +37,8 @@ class DatabaseManager:
             "SELECT * FROM users WHERE username = ? AND password = ?",
             (username, password)
         )
+        return self.cursor.fetchone() is not None
+
 
     def register(self, username, password):
         try:

@@ -69,12 +69,12 @@ class ExitDialog(QDialog):
         self.setStyleSheet("""
             QWidget#mainWidget {
                 background-color: rgba(255, 255, 255, 0.95);
-                border-radius: 15px;
+                border-radius: 5px;
                 border: 1px solid #e0e0e0;
             }
 
             QPushButton {
-                border-radius: 8px;
+                border-radius: 5px;
                 font-weight: bold;
                 font-size: 14px;
                 padding: 8px 16px;
@@ -82,6 +82,7 @@ class ExitDialog(QDialog):
             }
 
             QPushButton#cancel_btn {
+                border-radius: 3px;
                 background-color: transparent;
                 color: #666666;
                 border: 2px solid #cccccc;
@@ -98,6 +99,7 @@ class ExitDialog(QDialog):
             }
 
             QPushButton#exit_btn {
+                border-radius: 3px;
                 background-color: #ff4444;
                 color: white;
                 border: 2px solid #ff4444;
@@ -147,7 +149,7 @@ class VictoryDialog(QDialog):
 
     def setup_ui(self):
         self.setWindowTitle("Победа!")
-        self.setFixedSize(500, 480)
+        self.setFixedSize(500, 500)
 
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
@@ -171,7 +173,7 @@ class VictoryDialog(QDialog):
 
         trophy_label = QLabel("🏆")
         trophy_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        trophy_label.setStyleSheet("font-size: 80px; margin: 0px;")
+        trophy_label.setStyleSheet("font-size: 60px; margin: 0px;")
 
         completion_label = QLabel("Вы успешно завершили игру!")
         completion_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -180,6 +182,14 @@ class VictoryDialog(QDialog):
             color: #CCCCCC;
             margin: 0px;
         """)
+
+        count_label = QLabel("Монет собрано: 0/45")
+        count_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        count_label.setStyleSheet("""
+                    font-size: 24px;
+                    color: #CCCCCC;
+                    margin: 0px;
+                """)
 
         buttons_widget = QWidget()
         buttons_layout = QVBoxLayout(buttons_widget)
@@ -202,8 +212,7 @@ class VictoryDialog(QDialog):
         main_layout.addWidget(title_label)
         main_layout.addWidget(trophy_label)
         main_layout.addWidget(completion_label)
-        main_layout.addSpacing(10)
-        main_layout.addStretch()
+        main_layout.addWidget(count_label)
         main_layout.addWidget(buttons_widget)
 
         main_layout_wrapper = QVBoxLayout(self)
@@ -218,12 +227,12 @@ class VictoryDialog(QDialog):
                     stop: 0 #4A00E0,
                     stop: 1 #8E2DE2
                 );
-                border-radius: 20px;
+                border-radius: 3px;
                 border: 3px solid #FFD700;
             }
 
             QPushButton {
-                border-radius: 10px;
+                border-radius: 3px;  
                 font-weight: bold;
                 font-size: 14px;
                 padding: 10px 20px;
@@ -232,6 +241,7 @@ class VictoryDialog(QDialog):
             }
 
             QPushButton#menu_btn {
+                border-radius: 5px;
                 background-color: #FFD700;
                 color: #000000;
                 border: 2px solid #FFD700;
@@ -251,6 +261,7 @@ class VictoryDialog(QDialog):
             }
 
             QPushButton#exit_btn {
+                border-radius: 5px;
                 background-color: transparent;
                 color: #FFFFFF;
                 border: 2px solid rgba(255, 255, 255, 0.3);

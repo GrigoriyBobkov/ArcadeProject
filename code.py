@@ -88,11 +88,11 @@ class LoginWindow(QMainWindow):
         button_style = """
             QPushButton {
                 background-color: #4CAF50;
+                border-radius: 3  px;
                 color: white;
                 font-size: 24px;
                 font-weight: bold;
                 border: none;
-                border-radius: 15px;
                 padding: 20px 40px;
                 min-width: 300px;
                 margin: 10px;
@@ -109,11 +109,11 @@ class LoginWindow(QMainWindow):
         exit_button_style = """
             QPushButton {
                 background-color: #f44336;
+                border-radius: 3px;
                 color: white;
                 font-size: 24px;
                 font-weight: bold;
                 border: none;
-                border-radius: 15px;
                 padding: 20px 40px;
                 min-width: 300px;
                 margin: 10px;
@@ -180,8 +180,7 @@ class LoginWindow(QMainWindow):
                 color: white;
                 font-size: 14px;
                 padding: 10px;
-                background-color: rgba(0, 0, 0, 150);
-                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 150)
             }
         """)
 
@@ -221,7 +220,7 @@ class AuthDialog(QDialog):
 
     def initUI(self):
         self.setWindowTitle("Вход")
-        self.setFixedSize(400, 300)
+        self.setFixedSize(400, 320)
         self.setModal(True)
 
         layout = QVBoxLayout(self)
@@ -239,32 +238,34 @@ class AuthDialog(QDialog):
                 padding: 10px;
                 font-size: 16px;
                 border: 2px solid #3498db;
-                border-radius: 5px;
                 background-color: white;
             }
             QLineEdit:focus {
                 border-color: #1abc9c;
             }
             QPushButton {
+                border-radius: 3px;
                 font-size: 16px;
                 font-weight: bold;
                 padding: 12px;
                 border: none;
-                border-radius: 5px;
                 margin: 5px;
             }
             QPushButton:hover {
                 opacity: 0.9;
             }
             QPushButton#loginBtn {
+                border-radius: 3px;
                 background-color: #3498db;
                 color: white;
             }
             QPushButton#registerBtn {
+                border-radius: 3px;
                 background-color: #2ecc71;
                 color: white;
             }
             QPushButton#cancelBtn {
+                border-radius: 5px;
                 background-color: #e74c3c;
                 color: white;
             }
@@ -323,7 +324,7 @@ class RegisterDialog(QDialog):
 
     def initUI(self):
         self.setWindowTitle("Регистрация")
-        self.setFixedSize(400, 300)
+        self.setFixedSize(400, 320)
         self.setModal(True)
 
         layout = QVBoxLayout(self)
@@ -341,7 +342,6 @@ class RegisterDialog(QDialog):
                 padding: 10px;
                 font-size: 16px;
                 border: 2px solid #2ecc71;
-                border-radius: 5px;
                 background-color: white;
             }
             QLineEdit:focus {
@@ -352,7 +352,6 @@ class RegisterDialog(QDialog):
                 font-weight: bold;
                 padding: 12px;
                 border: none;
-                border-radius: 5px;
                 margin: 5px;
             }
             QPushButton:hover {

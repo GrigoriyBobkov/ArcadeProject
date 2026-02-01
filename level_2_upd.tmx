@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="15" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+ <tileset firstgid="1" source="my_tiles.tsx"/>
+ <layer id="1" name="wall_layer" width="15" height="12">
+  <data encoding="base64" compression="zlib">
+   eJyFUTkOwkAM9FJTBsQDIhEgX0CkhBKJEl7C98LxhCiipITQUzFWbMVyNmKlkePxjNfx5oHoTUTr0KIAcvlmXnPVKJcg1tQ/lnsBjatn8GaIy9Dn/50KOEOXAgEYhY5/UJcPeZ+RmSs3y83VE9QOwNfoSmAvu2icbgJcqI2c87zj0HlXkRl5T7rfQjwLiQydeWO800ifSvooihB/o8zMqH0+EY1/I71jC3430Fs1d+l/dfwR3AmYuZq9l/95Tq3G7jI1O7H+UiJrfmGdMX8=
+  </data>
+ </layer>
+ <layer id="3" name="coin_layer" width="15" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAOYMLBxqWGVDOpqYdYc8mxn1hAbbOpZR66OaTGKzY1tAxHdAAALQAAHw==
+  </data>
+ </layer>
+ <layer id="4" name="player_layer" width="15" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAMuDBSaMAoGAVUBACznwBG
+  </data>
+ </layer>
+ <layer id="5" name="exit_layer" width="15" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DogkQ0PgAI4ABi
+  </data>
+ </layer>
+ <layer id="6" name="spikes_layer" width="15" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAekB9g/SMFjIYTJoCFCQC6ZAB9
+  </data>
+ </layer>
+</map>
